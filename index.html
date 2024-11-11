@@ -767,10 +767,10 @@
   const urlQuery = new URLSearchParams(window.location.search);
   if (urlQuery.has("logout")) {
     // remove the query from the url
-    window.history.replaceState({}, "", "/lab/login/");
+    window.history.replaceState({}, "", "/login/");
   } else if (urlQuery.has("delete")) {
     // remove the query from the url
-    window.history.replaceState({}, "", "/lab/login/");
+    window.history.replaceState({}, "", "/login/");
     passwordInput.value = "";
     usernameInput.value = "";
   } else if (
@@ -844,7 +844,7 @@
   addEventListener("pointerdown", (event) => {
     // clear anchor from url, eg: #post-TodePond
     // but don't navigate or anything.
-    window.history.replaceState({}, "", "/lab/login/");
+    window.history.replaceState({}, "", "/login/");
 
     document.body.classList.add("untarget");
   });
