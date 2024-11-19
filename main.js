@@ -84,6 +84,8 @@ function createPostHTML(post) {
 async function main() {
   let posts = await loadFeed();
   updateUI(posts);
+  let loadingIndicator = document.getElementById("loading");
+  loadingIndicator.remove();
 }
 
 main();

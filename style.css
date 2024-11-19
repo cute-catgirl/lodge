@@ -33,7 +33,7 @@ p {
   font-size: 1.2em;
 }
 
-.status {
+.status, #loading {
   padding: 0.5em 0;
 }
 
