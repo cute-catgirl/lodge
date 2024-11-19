@@ -1,59 +1,20 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>LOGIN</title>
-<link rel="shortcut icon" href="/favicon.png" />
-<meta property="og:image" content="https://todepond.com/lab/og.png" />
-<meta property="og:title" content="Tadi lab" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Tadi lab" />
-<meta name="twitter:description" content="" />
-<meta name="twitter:image" content="https://todepond.com/lab/og.png" />
-
-<link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="style.css#v2" />
-
-<h1>Login</h1>
-<a
-  href="https://github.com/cute-catgirl/login"
-  style="float: right; position: relative; top: -2px"
-  >View source</a
->
-
-<header>
-  <label for="username">Public username</label>
-  <input type="text" id="username" name="username" autocomplete="off" />
-  <br /><br />
-  <label for="password">Password</label>
-  <input type="password" id="password" name="password" autocomplete="off" />
-  <br /><br />
-  <button type="submit" class="primary">Login</button>
-</header>
-
-<style>
-  /* spinning animation */
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-
-  #loading-feed {
-    animation: spin 1s linear infinite;
-  }
-</style>
-
-<h2 id="feed-heading">
-  Feed <button id="refresh-sign" class="secondary span">Refreshing...</button>
-</h2>
-<span
-  id="loading-feed"
-  style="position: fixed; top: 10px; left: 10px"
-  class="secondary"
-  >⏳</span
->
-<main></main>
-
-<script src="main.js"></script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Lodge</title>
+</head>
+<body>
+  <main>
+    <h1>Lodge</h1>
+    <div id="feed">
+    </div>
+  </main>
+  <script src="main.js" type="module"></script>
+</body>
+</html>
