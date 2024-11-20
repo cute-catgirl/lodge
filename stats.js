@@ -27,7 +27,10 @@ async function countPosts() {
 function updateUI(postCounts) {
     const sortedInstances = Object.entries(postCounts).sort(([, a], [, b]) => b - a);
 
+    let totalPosts = 0;
+
     for (let [instance, count] of sortedInstances) {
+        totalPosts += count;
         let statElement = document.createElement("div");
         let statHeader = document.createElement("h2");
         let headerContent = document.createTextNode(instance);
@@ -39,6 +42,17 @@ function updateUI(postCounts) {
         statElement.appendChild(statBody);
         statsDiv.appendChild(statElement);
     }
+    
+    let totalElement = document.createElement("div");
+    let totalHeader = document.createElement("h2");
+    let totalHeaderContent = document.createTextNode("Total");
+    totalHeader.appendChild(totalHeaderContent);
+    let totalBody = document.createElement("p");
+    let totalContent = document.createTextNode(totalPosts + " users");
+    totalBody.appendChild(totalContent);
+    totalElement.appendChild(totalHeader);
+    totalElement.appendChild(totalBody);
+    statsDiv.appendChild(totalElement);
 }
 
 async function main() {
