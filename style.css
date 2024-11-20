@@ -23,6 +23,7 @@ main {
   padding: 2em;
   text-align: left;
   width: 50%;
+  min-width: 300px;
 }
 
 h2 {
