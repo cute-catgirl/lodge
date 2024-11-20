@@ -53,3 +53,11 @@ header {
 .footer {
   font-size: 0.9em;
 }
+
+.button {
+  transition: transform 0.1s ease-in-out;
+}
+
+.button:hover {
+  transform: translate(0, -3px);
+}
