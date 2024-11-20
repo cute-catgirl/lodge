@@ -1,10 +1,14 @@
 /* Inter font */
 :root {
   font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  /* fix for Chrome */
 }
+
 @supports (font-variation-settings: normal) {
-  :root { font-family: InterVariable, sans-serif; }
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
 }
 
 body {
@@ -33,7 +37,19 @@ p {
   font-size: 1.2em;
 }
 
-.status, #loading {
+a {
+  font-size: 1.2em;
+  color: #2e3440;
+  font-weight: 500;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.status,
+#loading {
   padding: 0.5em 0;
 }
 
