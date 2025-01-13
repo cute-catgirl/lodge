@@ -62,3 +62,54 @@ header {
 .button:hover {
   transform: translate(0, -3px);
 }
+
+.circle {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 2px 5px 1px rgb(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 0;
+}
+
+.circle:hover {
+  transform: translateY(2px); /* Simulates being pushed down */
+  box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3); /* Subtler shadow for depth */
+  z-index: 999;
+}
+
+.circle[aria-description]::before {
+  content: attr(aria-description);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin-top: 10px;
+  min-width: 200px;
+  background-color: #eceff4;
+  border: 2px solid #2e3440;
+  border-radius: 5px;
+  padding: 2px;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.circle:hover::before {
+  display: block;
+}
+
+#feed-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 8px;
+  margin-bottom: 100px;
+}
+
+#header-right {
+  display: flex;
+  gap: 10px;
+}
