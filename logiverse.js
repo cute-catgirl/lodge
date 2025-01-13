@@ -49,7 +49,7 @@ export const config = {
             repository: 'https://github.com/Svenlaa/svenlaa.com/tree/main/playground/loggo',
 
             endpoints: {
-                feed: "https://svenlaa-lablogingetusers.web.val.run",
+                feed: 'https://api.svenlaa.com/logiverse/logs',
                 update: 'https://svenlaa-labloginupdatestatus.web.val.run',
                 login: 'https://svenlaa-lablogin.web.val.run',
                 delete: 'https://svenlaa-lablogindeleteaccount.web.val.run',
