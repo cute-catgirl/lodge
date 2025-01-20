@@ -1,0 +1,58 @@
+:root {
+    --background-color: black;
+    --background-image: url("space.gif");
+    --primary-color: #eceff4;
+    --link-color: #eceff4;
+    --navbar-link-color: #d8dee9;
+    --navbar-link-color-active: #eceff4;
+}
+
+* {
+    font-family: "Comic Sans MS";
+    cursor: url("../trans-tailless.cur"), auto;
+}
+
+#regular-header {
+    display: none !important;
+}
+
+#geocities-header {
+    display: block !important;
+}
+
+.status > h2 {
+    background-image: linear-gradient(180deg, rgba(255,0,0,1) 0%, rgba(0,89,255,1) 100%);
+    color: transparent;
+    background-clip: text;
+}
+
+.status > p {
+    color: gold;
+}
+
+.status > .footer {
+    color: yellow;
+}
+
+.geocities {
+    display: block !important;
+}
+
+#buttons {
+    display: flex !important;
+    flex-direction: column;
+    gap: 2px;
+    position: absolute;
+    padding: 8px;
+    top: 0;
+    left: 0;
+}
+
+.explosion {
+    display: block !important;
+    position: absolute;
+}
+
+.smiley {
+    visibility: visible !important;
+}

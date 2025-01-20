@@ -1,32 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/e62e48e8f3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="themes/nord.css" id="theme" />
+    <title>Lodge</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/e62e48e8f3.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://rsms.me/">
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Lodge</title>
-</head>
-
-<body>
-  <main>
-    <header>
-      <h1>Lodge</h1>
-      <div id="header-right">
-        <a href="/" class="button"><i class="fa-solid fa-home"></i></a>
-        <a href="/circles.html" class="button"><i class="fa-solid fa-circle" style="color: #4c566a"></i></a>
-        <a href="/stats.html" class="button"><i class="fa-solid fa-chart-simple" style="color: #4c566a"></i></a>
+  <body>
+    <main>
+      <div id="buttons" style="display: none">
+        <a href="https://logiverse.social"><img src="loggy.png" height="31"/></a>
+        <img src="trans-button.png" height="31" />
+        <img src="eyes.gif" height="31" />
+        <img src="css.png" height="31" />
       </div>
-    </header>
-    <div id="feed">
-      <h2 id="loading">Loading...</h2>
-    </div>
-  </main>
-  <script src="main.js" type="module"></script>
-</body>
+      <img src="explosion.gif" style="display: none; top: 500px; right: 40px;" class="explosion"/>
+      <img src="explosion.gif" style="display: none; top: 2000px; left: 50px;" class="explosion"/>
+      <img src="explosion.gif" style="display: none; top: 4000px; left: 200px;" class="explosion"/>
+      <img src="explosion.gif" style="display: none; top: 4200px; right: 200px;" class="explosion"/>
+      <header>
+        <h1 id="regular-header">Lodge</h1>
+        <h1 id="geocities-header" style="display: none">
+          <span style="color: red;">L</span><span style="color: orange;">o</span><span style="color: yellow;">d</span><span style="color: green;">g</span><span style="color: blue;">e</span> <span style="color: pink">:333333</span>
+        </h1>
+        <div id="header-right">
+          <a href="/" class="button active"><i class="fa-solid fa-home"></i></a>
+          <a href="/circles.html" class="button"
+            ><i class="fa-solid fa-circle"></i
+          ></a>
+          <a href="/stats.html" class="button"
+            ><i class="fa-solid fa-chart-simple"></i
+          ></a>
+          <div class="divider"></div>
+          <button onclick="nextTheme()">
+            <i class="fa-solid fa-palette"></i>
+          </button>
+        </div>
+      </header>
+      <img src="construction.gif" style="padding-top: 1em; padding-bottom: 1em; display: none;" class="geocities">
+      <div id="feed">
+        <h2 id="loading">Loading...</h2>
+      </div>
+    </main>
+    <div class="mask"></div>
 
+    <script src="main.js" type="module"></script>
+    <script src="themeManager.js"></script>
+  </body>
 </html>

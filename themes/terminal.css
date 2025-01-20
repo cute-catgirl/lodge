@@ -1,0 +1,11 @@
+:root {
+    --background-color: black;
+    --primary-color: lime;
+    --link-color: lime;
+    --navbar-link-color: lime;
+    --navbar-link-color-active: lime;
+}
+
+* {
+    font-family: monospace;
+}

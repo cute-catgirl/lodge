@@ -1,0 +1,8 @@
+:root {
+    --background-color: #000000;
+    --primary-color: #ffffff;
+}
+
+.mask {
+    visibility: visible;
+}

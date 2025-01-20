@@ -1,0 +1,8 @@
+:root {
+    --background-color: black;
+    --background-image: linear-gradient(in hsl longer hue 85deg, red 0 0);
+    --primary-color: white;
+    --link-color: white;
+    --navbar-link-color: lightgray;
+    --navbar-link-color-active: white;
+}

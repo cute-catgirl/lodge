@@ -62,4 +62,15 @@ async function main() {
     loadingIndicator.remove();
 }
 
+const mask = document.querySelector('.mask');
+        
+document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+    
+    // Update the mask position
+    mask.style.maskImage = `radial-gradient(circle at ${mouseX}px ${mouseY}px, transparent 0, transparent 100px, black 120px)`;
+    mask.style.webkitMaskImage = `radial-gradient(circle at ${mouseX}px ${mouseY}px, transparent 0, transparent 100px, black 120px)`;
+});
+
 main();

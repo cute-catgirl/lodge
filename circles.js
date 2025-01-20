@@ -82,6 +82,13 @@ function createPostHTML(post) {
   // Give it the text
   postDiv.ariaDescription = post.content;
 
+  // Smiley
+  let smileyImage = document.createElement("img");
+  smileyImage.src = "minesweeper.png";
+  smileyImage.style.visibility = "hidden";
+  smileyImage.className = "smiley";
+  postDiv.appendChild(smileyImage);
+
   // Return the post
   return postDiv;
 }
@@ -92,5 +99,16 @@ async function main() {
   let loadingIndicator = document.getElementById("loading");
   loadingIndicator.remove();
 }
+
+const mask = document.querySelector('.mask');
+        
+document.addEventListener('mousemove', (e) => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+    
+    // Update the mask position
+    mask.style.maskImage = `radial-gradient(circle at ${mouseX}px ${mouseY}px, transparent 0, transparent 100px, black 120px)`;
+    mask.style.webkitMaskImage = `radial-gradient(circle at ${mouseX}px ${mouseY}px, transparent 0, transparent 100px, black 120px)`;
+});
 
 main();

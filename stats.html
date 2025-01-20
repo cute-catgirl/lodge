@@ -11,25 +11,38 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="themes/nord.css" id="theme">
     <title>Lodge ~ Logiverse Stats</title>
   </head>
   <body>
     <main>
+      <div id="buttons" style="display: none">
+        <a href="https://logiverse.social"><img src="loggy.png" height="31"/></a>
+        <img src="trans-button.png" height="31" />
+        <img src="eyes.gif" height="31" />
+        <img src="css.png" height="31" />
+      </div>
       <header>
         <h1>Lodge ~ Logiverse Stats</h1>
         <div id="header-right">
-          <a href="/" class="button"><i class="fa-solid fa-home" style="color: #4c566a"></i></a>
+          <a href="/" class="button"><i class="fa-solid fa-home"></i></a>
           <a href="/circles.html" class="button"
-            ><i class="fa-solid fa-circle" style="color: #4c566a"></i
+            ><i class="fa-solid fa-circle"></i
           ></a>
-          <a href="/stats.html" class="button"
+          <a href="/stats.html" class="button active"
             ><i class="fa-solid fa-chart-simple"></i
           ></a>
+          <div class="divider"></div>
+          <button onclick="nextTheme()">
+            <i class="fa-solid fa-palette"></i>
+          </button>
         </div>
       </header>
       <h2 id="loading">Loading...</h2>
       <div id="stats"></div>
     </main>
+    <div class="mask"></div>
     <script src="stats.js" type="module"></script>
+    <script src="themeManager.js"></script>
   </body>
 </html>
